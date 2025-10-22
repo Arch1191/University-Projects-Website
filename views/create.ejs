@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/main.css">
+	<title>Dash</title>
+</head>
+<body>
+	<%- include('header', {activePage}) %>
+    <div class="content">
+		<h1>Create Course</h1>
+		<%=message%>
+		<form id="form" method="post">
+			<label for="Crs_Code">Course Code:</label><br>
+			<input type="number" id="Crs_Code" name="Crs_Code" min="0" required><br>
+			<label for="Crs_Title">Course Title:</label><br>
+			<input type="text" id="Crs_Title" name="Crs_Title" minlength="10" maxlength="250" required><br>
+			<label for="Crs_Enrollment">Course Enrollment:</label><br>
+			<input type="number" id="Crs_Enrollment" name="Crs_Enrollment" min="0" max="10000" required><br><br>
+			<input type="submit" value="Create Course">
+		</form>
+	</div>
+</body>

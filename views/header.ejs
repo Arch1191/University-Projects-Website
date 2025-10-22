@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/main.css">
+	<title>Header</title>
+</head>
+<body>
+    <nav class="topNavBar">
+		<a href="/" class="nav-link <%= activePage === '/' ? 'active' : '' %>">Home</a>
+		<a href="/courses" class="nav-link <%= activePage === '/courses' ? 'active' : '' %>">Courses</a>
+		<a href="/create-course" class="nav-link <%= activePage === '/create-course' ? 'active' : '' %>">Create Course</a>
+	</nav>
+</body>

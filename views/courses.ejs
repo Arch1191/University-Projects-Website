@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/main.css">
+	<title>Dash</title>
+</head>
+<body>
+	<%- include('header', {activePage}) %>
+	<div class="content">
+		<h1>Courses</h1>
+    	<table id="coursesList">
+			<tr>
+				<th>Course Code</th>
+				<th>Course Title</th>
+				<th>Enrollment</th>
+				<th> </th>
+			</tr>
+			<tr>
+				<% courses.forEach(course=> { %>
+			<tr>
+				<td><%- course.Crs_Code %></td>
+				<td><%- course.Crs_Title %></td>
+				<td><%- course.Crs_Enrollment %></td>
+				<td><a href="/edit-course/<%- course.Crs_Code %>"> Edit </a> </td>
+			</tr>
+				<% }) %>
+			</tr>
+		</table>
+	</div>
+</body>
